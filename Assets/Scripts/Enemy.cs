@@ -85,7 +85,7 @@ public class Enemy : MonoBehaviour {
 		
 		//最初の2回の音と最後の音を分ける
 		enemyCanvas.OnCountChanged
-			.Where (count => 0 < count && count < 3)
+			.Where (count => 0 < count && count < 2)
 			.Subscribe(_ => AudioManager.Instance.PlaySE ("SE_TOUCH", 0));
 		
 		//3回タッチされたらゲームオブジェクトを消す
